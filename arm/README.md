@@ -44,9 +44,13 @@ With at least two nodes in the swarm:
 
 ```
 # curl -4 localhost:3000
+hello
 # curl -4 localhost:3000
+hello
 # curl -4 localhost:3000
+hello
 # curl -4 localhost:3000
+hello
 ```
 
 > `curl -4` forces IPv4
