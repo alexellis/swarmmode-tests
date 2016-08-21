@@ -2,7 +2,16 @@
 
 These scenarios are designed to test the basic connectivity and features of swarmmode.
 
-Please report feedback to Docker Captain @alexellisuk on Twitter.
+* [Get Docker installed on your Pi](http://blog.alexellis.io/getting-started-with-docker-on-raspberry-pi/)
+
+### Reporting feedback
+
+Please report feedback to Docker Captain @alexellisuk on Twitter, also include:
+
+* Hardware used
+* Linux Distribution
+* Installation method
+* `docker version`
 
 
 ## Scenario 1 - the scaled service
