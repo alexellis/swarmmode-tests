@@ -1,6 +1,6 @@
 # Docker Swarmmode Test Scenarios
 
-These scenarios are designed to test the basic connectivity and features of swarmmode.
+These scenarios are designed to test the basic connectivity and features of swarmmode on the Raspberry Pi.
 
 * [Get Docker installed on your Pi](http://blog.alexellis.io/getting-started-with-docker-on-raspberry-pi/)
 
@@ -9,12 +9,13 @@ These scenarios are designed to test the basic connectivity and features of swar
 Please report feedback to Docker Captain @alexellisuk on Twitter, also include:
 
 * Hardware used
-* Linux Distribution
+* Linux Distribution i.e. Raspbian/Raspbian Lite/HypriotOS/Arch Linux
 * Installation method
 * `docker version`
 
-
 ## Scenario 1 - the scaled service
+
+This scenario tests basic scheduling and orchestration.
 
 With at least two nodes in the swarm:
 
@@ -33,6 +34,8 @@ docker service rm ping1
 ```
 
 ## Scenario 2 - the hello world webservice
+
+This scenario tests the built-in load balancing / mesh routing capabilities.
 
 With at least two nodes in the swarm:
 
@@ -67,7 +70,9 @@ docker service rm hello1
 
 ## Scenario 3 - inter-container communication
 
-This test lets a web container resolve a DB container in order to increment a counter. Make sure you have at least 2 nodes in your swarm.
+Thie scenario tests inter-container resolution and connectivity. A redis database runs on only one node and on both nodes we run a hit counter which will increment a number held in the redis database with each GET request.
+
+Make sure you have at least 2 nodes in your swarm.
 
 * Setting up:
 
