@@ -6,7 +6,7 @@ These scenarios are designed to test the basic connectivity and features of swar
 
 ### Reporting feedback
 
-Please report feedback to Docker Captain @alexellisuk on Twitter, also include:
+Please report feedback to Docker Captain [@alexellisuk](http://twitter.com/alexellisuk) on Twitter, also include:
 
 * Hardware used
 * Linux Distribution i.e. Raspbian/Raspbian Lite/HypriotOS/Arch Linux
