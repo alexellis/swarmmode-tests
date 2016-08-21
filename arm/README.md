@@ -61,6 +61,10 @@ hello
 docker service rm hello1
 ```
 
+* Source
+
+[arm-alpinehello](https://github.com/alexellis/swarmmode-tests/tree/master/arm/arm-alpinehello)
+
 ## Scenario 3 - inter-container communication
 
 This test lets a web container resolve a DB container in order to increment a counter. Make sure you have at least 2 nodes in your swarm.
@@ -101,3 +105,6 @@ The counter should now equal 4.
 # docker network rm armnet
 ```
 
+* Source
+
+[arm_redis_counter](https://github.com/alexellis/swarmmode-tests/tree/master/arm/arm_redis_counter)
