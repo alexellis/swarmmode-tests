@@ -20,7 +20,7 @@ This scenario tests basic scheduling and orchestration.
 With at least two nodes in the swarm:
 
 ```
-# docker service create --name ping1 --replicas=2 alexellis2/pingcurl:armv6 ping docker.com
+# docker service create --name ping1 --replicas=2 alexellis2/arm-pingcurl ping docker.com
 ```
 
 * Testing:
@@ -33,6 +33,10 @@ Check logs on both nodes for successful ping responses.
 docker service rm ping1
 ```
 
+* Source:
+
+[arm-pingcurl](https://github.com/alexellis/swarmmode-tests/tree/master/arm/pingcurl)
+
 ## Scenario 2 - the hello world webservice
 
 This scenario tests the built-in load balancing / mesh routing capabilities.
@@ -44,6 +48,8 @@ With at least two nodes in the swarm:
 ```
 
 * Testing
+
+Perform this step 4 times while logged into the manager only.
 
 ```
 # curl -4 localhost:3000
@@ -83,6 +89,8 @@ Make sure you have at least 2 nodes in your swarm.
 ```
 
 * Testing / verification
+
+Perform this test logged into the manager.
 
 Use `docker service ps counter` and check that at there is one `counter` replica on either host.
 
