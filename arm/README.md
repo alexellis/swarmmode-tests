@@ -35,7 +35,7 @@ docker service rm ping1
 
 * Source:
 
-[arm-pingcurl](https://github.com/alexellis/swarmmode-tests/tree/master/arm/pingcurl)
+[arm-pingcurl](https://github.com/alexellis/swarmmode-tests/tree/master/arm/arm-pingcurl)
 
 ## Scenario 2 - the hello world webservice
 
