@@ -86,8 +86,8 @@ Make sure you have at least 2 nodes in your swarm.
 * Setting up:
 
 ```
-# docker network create --driver overlay armnet
-# docker service create --replicas=1 --network=armnet --subnet 20.0.14.0/24 --name redis alexellis2/redis-arm:v6
+# docker network create --driver overlay --subnet 20.0.14.0/24 armnet
+# docker service create --replicas=1 --network=armnet --name redis alexellis2/redis-arm:v6
 # docker service create --name counter --replicas=2 --network=armnet --publish 3000:3000 alexellis2/arm_redis_counter
 ```
 
