@@ -23,7 +23,7 @@ This scenario tests basic scheduling and orchestration.
 With at least two nodes in the swarm:
 
 ```
-# docker service create --name ping1 --replicas=2 alexellis2/arm-pingcurl ping docker.com
+# docker service create --name ping1 --replicas=2 alexellis2/arm-pingcurl ping google.com
 ```
 
 * Testing:
