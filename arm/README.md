@@ -6,11 +6,14 @@ These scenarios are designed to test the basic connectivity and features of swar
 
 ### Reporting feedback
 
-Please report feedback to Docker Captain [@alexellisuk](http://twitter.com/alexellisuk) on Twitter, also include:
+Please report feedback to Docker Captain [@alexellisuk](http://twitter.com/alexellisuk) by creating a Github Issue in this repository. 
+
+Please include:
 
 * Hardware used
-* Linux Distribution i.e. Raspbian/Raspbian Lite/HypriotOS/Arch Linux
 * Installation method
+* Linux Distribution i.e. Raspbian/Raspbian Lite/HypriotOS/Arch Linux
+* Kernel version `uname -a`
 * `docker version`
 
 ## Scenario 1 - the scaled service
@@ -20,7 +23,7 @@ This scenario tests basic scheduling and orchestration.
 With at least two nodes in the swarm:
 
 ```
-# docker service create --name ping1 --replicas=2 alexellis2/arm-pingcurl ping docker.com
+# docker service create --name ping1 --replicas=2 alexellis2/arm-pingcurl ping google.com
 ```
 
 * Testing:
@@ -83,7 +86,7 @@ Make sure you have at least 2 nodes in your swarm.
 * Setting up:
 
 ```
-# docker network create --driver overlay armnet
+# docker network create --driver overlay --subnet 20.0.14.0/24 armnet
 # docker service create --replicas=1 --network=armnet --name redis alexellis2/redis-arm:v6
 # docker service create --name counter --replicas=2 --network=armnet --publish 3000:3000 alexellis2/arm_redis_counter
 ```
@@ -121,3 +124,8 @@ The counter should now equal 4.
 * Source
 
 [arm_redis_counter](https://github.com/alexellis/swarmmode-tests/tree/master/arm/arm_redis_counter)
+
+
+### Heads-up
+
+Running the Docker daemon in debug mode `dockerd --daemon` appears to suggest that the kernel module VXLAN is not available. Please run `rpi-update` and if this command is not available it can be installed with `apt-get`.
