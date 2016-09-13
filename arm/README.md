@@ -129,3 +129,7 @@ The counter should now equal 4.
 ### Heads-up
 
 Running the Docker daemon in debug mode `dockerd --daemon` appears to suggest that the kernel module VXLAN is not available. Please run `rpi-update` and if this command is not available it can be installed with `apt-get`.
+
+```
+$ sudo apt-get update && sudo apt-get install -qy rpi-update && sudo rpi-update && sudo reboot
+```
